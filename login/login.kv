@@ -1,0 +1,26 @@
+# kivy 1.11.1
+
+# every class in your app can be represented by a rule like
+# this in the kv file
+<LoginScreen>:
+    f_username: username
+    f_password: password
+
+    # this is how you add your widget/layout to parent
+    # (note the indentation)
+    GridLayout:
+
+        # this how you set each property of your widget/layout
+        rows: 2
+        cols: 2
+        padding: 10
+        spacing: 10
+        Label:
+            text: 'Username:'
+        TextInput:
+            id: username
+        Label:
+            text: 'Password:'
+        TextInput:
+            id: password
+            password: True
