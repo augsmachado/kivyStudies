@@ -8,7 +8,5 @@ class Incrementer(BoxLayout):
 class Test(App):
     def build(self):
        return Incrementer()
-    	
-        return box
 
 Test().run()
