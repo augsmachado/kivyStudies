@@ -1,12 +1,17 @@
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.label import Label
 
 
-class Incrementer(BoxLayout):
-    pass
+class Tasks(BoxLayout):
+    def __init__(self, tasks, **kwargs): #keywords arguments
+        super().__init__(**kwargs)
+        for task in tasks:
+            self.add_widget(Label(text=task, font_size=30))
+
 
 class Test(App):
     def build(self):
-       return Incrementer()
+        return Tasks('beber agua', orientation='horizontal')
 
 Test().run()
