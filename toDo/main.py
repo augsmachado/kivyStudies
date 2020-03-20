@@ -12,6 +12,6 @@ class Tasks(BoxLayout):
 
 class Test(App):
     def build(self):
-        return Tasks('beber agua', orientation='horizontal')
+        return Tasks(['beber agua', 'fazer compras', 'dormir mais cedo', orientation='horizontal'])
 
 Test().run()
